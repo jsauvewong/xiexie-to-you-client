@@ -4,26 +4,28 @@ import Link from "next/link"
 import * as React from "react"
 
 import {
-  Body,
   EntirePage,
   Button,
-  TopThirdBody,
+  LoginFormBody,
+  LoginInputDiv,
+  LoginInput,
+  LoginButtonDiv,
+  LoginCenterBody,
+  LoginForm,
+  BodyDiv,
+  LoginBody,
 } from "../components/styled-components"
 
 import {
   BigDGFont,
   SmallDGFont,
-  MedMGFont,
   SmallDGNoBoldFont,
-  SMGFont,
-  LMGFont,
+  FormSMGFont,
+  FormMMGFont,
 } from "../components/font"
 
 import {
-  Header,
-  LeftNavBar,
-  RightNavBar,
-  RightNavBarTabs,
+  PageHeader
 } from "../components/header"
 
 import {
@@ -35,8 +37,31 @@ import {
   BottomLeftFont,
   RightBottomFooter,
   BottomLinksFooter,
-  LeftBottomFooter,
 } from "../components/footer"
+
+import {
+  // Background,
+  BackgroundOverlay,
+  LoginPicture,
+  LoginPictureDiv,
+  PictureDiv,
+  LoginCenterDiv,
+} from "../components/logincss"
+
+import {
+  SignUpPicture,
+  SignUpOverlay,
+  SignUpBodyDiv,
+  SignUpPictureDiv,
+  SignUpBody,
+  SignUpButton,
+  SignUpDiv,
+  CreateAccount,
+} from "../components/signUpcss"
+
+import { LoginLWhiteFont, LoginMWhiteFont } from "../components/font"
+
+import { CenterParagraph } from "../components/logincss"
 
 // export default function Buttons() {
 //   function handleClick(e) {
@@ -51,37 +76,58 @@ export default function Login() {
     <div>
       <EntirePage>
         {/*Header*/}
-
-        <Header>
-          <LeftNavBar>Gratefulness</LeftNavBar>
-          <RightNavBarTabs>
-            <RightNavBar>Login</RightNavBar>
-            <RightNavBar>Donate</RightNavBar>
-            <Button>Sign Up</Button>
-          </RightNavBarTabs>
-        </Header>
+        <PageHeader />
+        
 
         {/*Body*/}
+        <SignUpBodyDiv>
+          <SignUpPictureDiv>
+            <SignUpOverlay>
+              <SignUpPicture />
+            </SignUpOverlay>
 
-        <Body>
-          <SmallDGFont>A Simple Gratefulness Tracker</SmallDGFont>
-          <BigDGFont>Gratefulness' Features</BigDGFont>
-          <SmallDGNoBoldFont>
-            Simple journal tracking. Start tracking entries directly from your
-            messages. Sign up today!
-          </SmallDGNoBoldFont>
-          <LMGFont>Sign Up</LMGFont>
-          <SMGFont>Name:</SMGFont>
-          <SMGFont>Phone Number:</SMGFont>
-          <Button>Ready!</Button>
-        </Body>
+            <SignUpDiv>
+              <SignUpBody>
+                <LoginCenterDiv>
+                  <LoginLWhiteFont>Login</LoginLWhiteFont>
+                </LoginCenterDiv>
+
+                <LoginCenterBody>
+                  <LoginForm>
+                    <LoginFormBody>
+                      {" "}
+                      <LoginInputDiv>
+                        {" "}
+                        <LoginMWhiteFont>Name:</LoginMWhiteFont>
+                        <LoginInput defaultValue="" type="text" />
+                      </LoginInputDiv>
+                      <LoginInputDiv>
+                        <LoginMWhiteFont>Verification Number:</LoginMWhiteFont>
+                        <LoginInput defaultValue="" type="text" />
+                      </LoginInputDiv>
+                    </LoginFormBody>
+                    <LoginButtonDiv>
+                      <SignUpButton style={{ marginTop: "20px" }}>
+                        Ready!
+                      </SignUpButton>
+                    </LoginButtonDiv>
+                  </LoginForm>
+                </LoginCenterBody>
+              </SignUpBody>
+            </SignUpDiv>
+            <CreateAccount>
+                <SmallDGNoBoldFont>
+                  Create your account <span>&#8594;</span>
+                </SmallDGNoBoldFont>
+              </CreateAccount>
+          </SignUpPictureDiv>
+        </SignUpBodyDiv>
 
         {/*Footer*/}
 
         <Footer>
           <LeftFooter>
             <TopLeftFooter>Gratefulness</TopLeftFooter>
-
             <BottomLeftFont>What are you grateful for?</BottomLeftFont>
             <BottomLeftFont>© Gratefulness Tracker</BottomLeftFont>
           </LeftFooter>
@@ -94,25 +140,6 @@ export default function Login() {
               <BottomLinksFooter>Privacy Policy</BottomLinksFooter>
             </RightBottomFooter>
           </RightFooter>
-
-          {/* <LeftFooter>
-            <AlignFooter>
-              <TopFooter>Gratefulness</TopFooter>
-            </AlignFooter>
-
-            <MiddleFooter>What are you grateful for today?</MiddleFooter>
-            <MiddleFooter> c Gratefulness Tracker</MiddleFooter>
-          </LeftFooter>
-          <RightFooter>
-            <AlignFooter>
-              <TopSmallFooter>More</TopSmallFooter>
-            </AlignFooter>
-            <MiddleLinkFooter>Linkedin</MiddleLinkFooter>
-            <MiddleLinkFooter>Github</MiddleLinkFooter>
-            <MiddleLinkFooter>About Us</MiddleLinkFooter>
-            <MiddleLinkFooter>About the App</MiddleLinkFooter>
-            <MiddleLinkFooter>Privacy Policy</MiddleLinkFooter>
-          </RightFooter> */}
         </Footer>
       </EntirePage>
     </div>

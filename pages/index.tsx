@@ -4,10 +4,11 @@ import Link from "next/link"
 import * as React from "react"
 
 import {
-  Body,
+  Div,
   EntirePage,
   Button,
   TopThirdBody,
+  BodyDiv,
 } from "../components/styled-components"
 
 import {
@@ -23,16 +24,11 @@ import {
   BigDGFont,
   SmallDGFont,
   MedMGFont,
-  SmallDGNoBoldFont,
-  SMGFont,
-  LMGFont,
+  MedDGFont,
 } from "../components/font"
 
 import {
-  Header,
-  LeftNavBar,
-  RightNavBar,
-  RightNavBarTabs,
+  PageHeader
 } from "../components/header"
 
 import {
@@ -44,7 +40,6 @@ import {
   BottomLeftFont,
   RightBottomFooter,
   BottomLinksFooter,
-  LeftBottomFooter,
 } from "../components/footer"
 
 // export default function Buttons() {
@@ -60,39 +55,41 @@ export default function Login() {
     <div>
       <EntirePage>
         {/*Header*/}
-
-        <Header>
-          <LeftNavBar>Gratefulness</LeftNavBar>
-          <RightNavBarTabs>
-            <RightNavBar>Login</RightNavBar>
-            <RightNavBar>Donate</RightNavBar>
-            <Button>Sign Up</Button>
-          </RightNavBarTabs>
-        </Header>
+        <PageHeader />
 
         {/*Body*/}
 
-        <Body>
-          <MedMGFont>Check Out Simple</MedMGFont>
-          <BigDGFont>Start Free Today</BigDGFont>
+        <BodyDiv>
+          <Div>
+            <SmallDGFont>Check Out Gratefulness</SmallDGFont>
+            <BigDGFont style={{ marginTop: "0px" }}>Start Free Today</BigDGFont>
+            <Button>Sign Up</Button>
+          </Div>
 
           <MushroomDiv>
             <MushroomOverlay>
               <MushroomPicture />
             </MushroomOverlay>
             <MushroomTopFont>I'm grateful for...</MushroomTopFont>
-            <MushroomMiddleFont>the crackers I just ate.</MushroomMiddleFont>
+            <MushroomMiddleFont>
+              the crackers I just ate.
+              <br /> the water I just had.
+              <br /> my friends, who makes me laugh.
+              <br /> the opportunity to create this app.
+              <br /> my #1 supporter and partner who has been patient with all
+              my questions.
+            </MushroomMiddleFont>
             <MushroomBottomFont>It's that simple.</MushroomBottomFont>
           </MushroomDiv>
 
           <TopThirdBody>
             {" "}
-            <SmallDGFont>Check out </SmallDGFont>
+            <MedDGFont style={{ padding: "5px" }}>Check out </MedDGFont>
             <MedMGFont>
-              <a style={{ textDecoration: "underline" }}>Simple Features</a>
+              <a style={{ textDecoration: "underline" }}>Grateful Features</a>
             </MedMGFont>
           </TopThirdBody>
-        </Body>
+        </BodyDiv>
 
         {/*Footer*/}
 

@@ -1,5 +1,7 @@
 import styled from "styled-components"
 
+import * as React from "react"
+
 export const Footer = styled.section`
   display: flex;
   justify-content: space-between| space-evenly;
@@ -12,7 +14,8 @@ export const Footer = styled.section`
   font-family: rubik;
   align-items: baseline;
   letter-spacing: 0.02em;
-  border: 2px solid purple;
+  width: 100%;
+  margin-top: -200px;
 `
 
 export const LeftFooter = styled.div`
@@ -61,5 +64,4 @@ export const BottomLinksFooter = styled.h3`
   font-weight: 400;
   font-family: rubik;
 `
-//blah
-//testtest
+
