@@ -9,6 +9,7 @@
   },
   "dependencies": {
     "@popperjs/core": "^2.4.4",
+    "axios": "^0.20.0",
     "jquery": "1.9.1",
     "next": "9.5.2",
     "nextjs": "^0.0.3",
@@ -27,5 +28,6 @@
   },
   "resolutions": {
     "styled-components": "^5"
-  }
+  },
+  "proxy": "http://localhost:3000/"
 }

@@ -1,5 +1,5 @@
 import Head from "next/head"
-//import styles from "../styles/Home.module.css"
+
 import Link from "next/link"
 import * as React from "react"
 
@@ -27,30 +27,11 @@ import {
   MedDGFont,
 } from "../components/font"
 
-import {
-  PageHeader
-} from "../components/header"
+import { PageHeader } from "../components/header"
 
-import {
-  Footer,
-  LeftFooter,
-  TopLeftFooter,
-  TopRightFooter,
-  RightFooter,
-  BottomLeftFont,
-  RightBottomFooter,
-  BottomLinksFooter,
-} from "../components/footer"
+import { PageFooter } from "../components/footer"
 
-// export default function Buttons() {
-//   function handleClick(e) {
-//     console.log("I clicked the button")
-//   }
-function Mushroom() {
-  return <img src="/small-mushroom.jpg" alt="small mushroom on moss" />
-}
-
-export default function Login() {
+export default function HomePage() {
   return (
     <div>
       <EntirePage>
@@ -63,7 +44,10 @@ export default function Login() {
           <Div>
             <SmallDGFont>Check Out Gratefulness</SmallDGFont>
             <BigDGFont style={{ marginTop: "0px" }}>Start Free Today</BigDGFont>
-            <Button>Sign Up</Button>
+
+            <Link href="/signUp">
+              <Button>Sign Up</Button>
+            </Link>
           </Div>
 
           <MushroomDiv>
@@ -92,44 +76,14 @@ export default function Login() {
         </BodyDiv>
 
         {/*Footer*/}
-
-        <Footer>
-          <LeftFooter>
-            <TopLeftFooter>Gratefulness</TopLeftFooter>
-
-            <BottomLeftFont>What are you grateful for?</BottomLeftFont>
-            <BottomLeftFont>© Gratefulness Tracker</BottomLeftFont>
-          </LeftFooter>
-          <RightFooter>
-            <TopRightFooter>More</TopRightFooter>
-            <RightBottomFooter>
-              <BottomLinksFooter>LinkedIn</BottomLinksFooter>
-              <BottomLinksFooter>GitHub</BottomLinksFooter>
-              <BottomLinksFooter>About Us</BottomLinksFooter>
-              <BottomLinksFooter>Privacy Policy</BottomLinksFooter>
-            </RightBottomFooter>
-          </RightFooter>
-
-          {/* <LeftFooter>
-            <AlignFooter>
-              <TopFooter>Gratefulness</TopFooter>
-            </AlignFooter>
-
-            <MiddleFooter>What are you grateful for today?</MiddleFooter>
-            <MiddleFooter> c Gratefulness Tracker</MiddleFooter>
-          </LeftFooter>
-          <RightFooter>
-            <AlignFooter>
-              <TopSmallFooter>More</TopSmallFooter>
-            </AlignFooter>
-            <MiddleLinkFooter>Linkedin</MiddleLinkFooter>
-            <MiddleLinkFooter>Github</MiddleLinkFooter>
-            <MiddleLinkFooter>About Us</MiddleLinkFooter>
-            <MiddleLinkFooter>About the App</MiddleLinkFooter>
-            <MiddleLinkFooter>Privacy Policy</MiddleLinkFooter>
-          </RightFooter> */}
-        </Footer>
+        <PageFooter />
       </EntirePage>
+      <style jsx global>{`
+        body {
+          margin: 0px;
+          padding: 0px;
+        }
+      `}</style>
     </div>
   )
 }

@@ -3,52 +3,18 @@ import Head from "next/head"
 import Link from "next/link"
 import * as React from "react"
 
-import {
-  EntirePage,
-  Button,
-  LoginFormBody,
-  LoginInputDiv,
-  LoginInput,
-  LoginButtonDiv,
-  LoginCenterBody,
-  LoginForm,
-  BodyDiv,
-  LoginBody,
-} from "../components/styled-components"
+import { EntirePage, BodyDiv } from "../components/styled-components"
 
-import { LoginLWhiteFont, LoginMWhiteFont } from "../components/font"
+import { PageHeader } from "../components/header"
+
+import { PageFooter } from "../components/footer"
 
 import {
-  PageHeader
-} from "../components/header"
-
-import {
-  Footer,
-  LeftFooter,
-  TopLeftFooter,
-  TopRightFooter,
-  RightFooter,
-  BottomLeftFont,
-  RightBottomFooter,
-  BottomLinksFooter,
-} from "../components/footer"
-
-import {
-  // Background,
   BackgroundOverlay,
   LoginPicture,
   LoginPictureDiv,
-  PictureDiv,
-  LoginCenterDiv,
-} from "../components/logincss"
-
-// export default function Buttons() {
-//   function handleClick(e) {
-//     console.log("I clicked the button")
-//   }
-// function Mushroom() {
-//   return <img src="/small-mushroom.jpg" alt="small mushroom on moss" />
-// }
+  LoginForm,
+} from "../components/loginForm"
 
 export default function Login() {
   return (
@@ -66,54 +32,19 @@ export default function Login() {
               <LoginPicture />
             </BackgroundOverlay>
 
-            <LoginBody>
-              <LoginCenterDiv>
-                <LoginLWhiteFont>Login</LoginLWhiteFont>
-              </LoginCenterDiv>
-
-              <LoginCenterBody>
-                <LoginForm>
-                  <LoginFormBody>
-                    {" "}
-                    <LoginInputDiv>
-                      {" "}
-                      <LoginMWhiteFont>Name:</LoginMWhiteFont>
-                      <LoginInput defaultValue="" type="text" />
-                    </LoginInputDiv>
-                    <LoginInputDiv>
-                      <LoginMWhiteFont>Verification Number:</LoginMWhiteFont>
-                      <LoginInput defaultValue="" type="text" />
-                    </LoginInputDiv>
-                  </LoginFormBody>
-                  <LoginButtonDiv>
-                    <Button style={{ marginTop: "20px" }}>Ready!</Button>
-                  </LoginButtonDiv>
-                </LoginForm>
-              </LoginCenterBody>
-            </LoginBody>
+            <LoginForm />
           </LoginPictureDiv>
         </BodyDiv>
 
         {/*Footer*/}
-
-        <Footer>
-          <LeftFooter>
-            <TopLeftFooter>Gratefulness</TopLeftFooter>
-
-            <BottomLeftFont>What are you grateful for?</BottomLeftFont>
-            <BottomLeftFont>© Gratefulness Tracker</BottomLeftFont>
-          </LeftFooter>
-          <RightFooter>
-            <TopRightFooter>More</TopRightFooter>
-            <RightBottomFooter>
-              <BottomLinksFooter>LinkedIn</BottomLinksFooter>
-              <BottomLinksFooter>GitHub</BottomLinksFooter>
-              <BottomLinksFooter>About Us</BottomLinksFooter>
-              <BottomLinksFooter>Privacy Policy</BottomLinksFooter>
-            </RightBottomFooter>
-          </RightFooter>
-        </Footer>
+        <PageFooter />
       </EntirePage>
+      <style jsx global>{`
+        body {
+          margin: 0px;
+          padding: 0px;
+        }
+      `}</style>
     </div>
   )
 }

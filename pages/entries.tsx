@@ -1,4 +1,5 @@
 import * as React from "react"
+import ReactDOM from "react-dom"
 
 import { EntirePage, Button, BodyDiv } from "../components/styled-components"
 
@@ -19,6 +20,7 @@ import {
 import {
   Header,
   LeftNavBar,
+  PageHeader,
   RightNavBar,
   RightNavBarTabs,
 } from "../components/header"
@@ -34,11 +36,7 @@ import {
   BottomLinksFooter,
 } from "../components/footer"
 
-import {
-  // Background,
-  CenterParagraph,
-  BackgroundOverlay,
-} from "../components/logincss"
+import { SigningUp } from "../components/signUpForm"
 
 export default function Login() {
   return (
@@ -46,15 +44,7 @@ export default function Login() {
       <EntirePage>
         {/*Header*/}
 
-        <Header>
-          <LeftNavBar>Gratefulness</LeftNavBar>
-          <RightNavBarTabs>
-            <RightNavBar>Sign Up</RightNavBar>
-            <RightNavBar>FAQ</RightNavBar>
-            <RightNavBar>Donate</RightNavBar>
-            <Button style={{ marginLeft: "30px" }}>Login</Button>
-          </RightNavBarTabs>
-        </Header>
+        <PageHeader />
 
         {/*Body*/}
 
@@ -67,6 +57,7 @@ export default function Login() {
         <BodyDiv>
           <EntryBoxOverlay />
         </BodyDiv>
+
         {/*Footer*/}
 
         <Footer>
@@ -87,6 +78,7 @@ export default function Login() {
           </RightFooter>
         </Footer>
       </EntirePage>
+      <SigningUp />
     </div>
   )
 }

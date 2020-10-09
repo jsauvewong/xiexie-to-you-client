@@ -82,7 +82,6 @@ export const CenterBody = styled.section`
   align-items: center;
   justify-content: center;
   border: 2px solid pink;
-  position: absolute;
 `
 export const Form = styled.section`
   display: flex;
@@ -111,49 +110,4 @@ export const Input = styled.input`
   font-size: 15px;
   font-family: rubik;
 `
-//LoginForm
-export const LoginBody = styled.section`
-  display: flex;
-  height: 600px;
-  width: 350px;
-  position: absolute;
-  align-items: flex-start;
-  justify-content: center;
-  flex-direction: column;
-`
-export const LoginCenterBody = styled.section`
-  display: flex;
-  text-transform: uppercase;
-  align-items: center;
-  justify-content: center;
-`
-export const LoginForm = styled.section`
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  align-self: center;
-`
-export const LoginFormBody = styled.section`
-  display: flex;
-  text-transform: uppercase;
-  flex-direction: column;
-  align-items: center;
-`
-export const LoginInputDiv = styled.div`
-  display: flex;
-  justify-content: flex-start;
-  flex-direction: column;
-  flex-wrap: nowrap;
-`
-export const LoginInput = styled.input`
-  background: #eeeeee;
-  width: 300px;
-  height: 27px;
-  border: none;
-  font-size: 15px;
-  font-family: rubik;
-`
-export const LoginButtonDiv = styled.div`
-  display: flex;
-  justify-content: center;
-`
+

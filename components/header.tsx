@@ -1,5 +1,6 @@
 import styled from "styled-components"
 import * as React from "react"
+import Link from "next/link"
 
 import { Button } from "./styled-components"
 
@@ -7,14 +8,11 @@ export const Header = styled.section`
   display: flex;
   text-transform: uppercase;
   justify-content: space-between;
-  flex-grow: 1;
   align-items: center;
   background: #ffffff;
-  position: fixed;
   width: 100%;
-  top: 0;
-  z-index: 999;
   letter-spacing: 0.02em;
+  height: 100px;
 `
 export const LeftNavBar = styled.h1`
   margin: 20px;
@@ -49,7 +47,10 @@ export function PageHeader() {
         <RightNavBar>Sign Up</RightNavBar>
         <RightNavBar>FAQ</RightNavBar>
         <RightNavBar>Donate</RightNavBar>
-        <Button style={{ marginLeft: "30px" }}>Login</Button>
+
+        <Link href="/signUp">
+          <Button style={{ marginLeft: "30px" }}>Login</Button>
+        </Link>
       </RightNavBarTabs>
     </Header>
   )

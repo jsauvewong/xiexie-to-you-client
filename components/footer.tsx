@@ -1,4 +1,5 @@
 import styled from "styled-components"
+import Link from "next/link"
 
 import * as React from "react"
 
@@ -10,12 +11,10 @@ export const Footer = styled.section`
   padding: 10px;
   color: #ffffff;
   flex-wrap: nowrap;
-  flex-grow: 1;
   font-family: rubik;
   align-items: baseline;
   letter-spacing: 0.02em;
   width: 100%;
-  margin-top: -200px;
 `
 
 export const LeftFooter = styled.div`
@@ -65,3 +64,34 @@ export const BottomLinksFooter = styled.h3`
   font-family: rubik;
 `
 
+export function PageFooter() {
+  return (
+    <Footer>
+      <LeftFooter>
+        <TopLeftFooter>Gratefulness</TopLeftFooter>
+        <BottomLeftFont>What are you grateful for?</BottomLeftFont>
+        <BottomLeftFont>© Gratefulness Tracker</BottomLeftFont>
+      </LeftFooter>
+      <RightFooter>
+        <TopRightFooter>More</TopRightFooter>
+        <RightBottomFooter>
+          <BottomLinksFooter>
+            <Link href="https://www.linkedin.com/in/jeanne-sauve-wong-9a9b6b132/">
+              <a>LinkedIn</a>
+            </Link>
+          </BottomLinksFooter>
+          <BottomLinksFooter>
+            <Link href="https://github.com/jsauvewong">
+              <a>GitHub</a>
+            </Link>
+          </BottomLinksFooter>
+          <BottomLinksFooter>
+            <Link href="https://www.jeanne-sauve.com/">
+              <a>About Coder</a>
+            </Link>
+          </BottomLinksFooter>
+        </RightBottomFooter>
+      </RightFooter>
+    </Footer>
+  )
+}
